@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;500;700;800&display=swap');
+
+
+
+
+@Cobalt-blue: #1125d4;
+@Light-red : #ff5757;
+@Orangey-yellow : #ffb01f;
+@Green-teal : #00bd91;
+@Light-slate-blue : #7857ff;
+@Light-royal-blue : #2e2be9;
+@Violet-blue : #4e21ca;
+@Persian-blue : #2421cal;
+@Pale-blue : #ebf1ff;
+@Light-lavender : #c8c7ff;
+@Dark-gray-blue : #303b5a;
+
+.container {
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        border-radius: 20px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__result {
+        border-radius: 30px;
+        flex: 1 1 50%;
+        background-color: @Light-royal-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+
+
+
+        &-heading {
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: @Light-lavender;
+            font-size: 24px;
+            font-weight: 700;
+
+        }
+
+        &-score {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            background-color: @Cobalt-blue;
+            padding: 30px 50px;
+            border-radius: 50%;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+                inset: 0;
+                border-radius: 50%;
+
+
+            }
+
+
+
+        }
+
+        &-actualscore {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 70px;
+            color: white;
+            font-weight: 700;
+            z-index: 1;
+
+
+        }
+
+        &-totalscore {
+            color: @Light-lavender;
+            font-family: 'Hanken Grotesk', sans-serif;
+
+            font-size: 18px;
+        }
+
+        &-quality {
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: white;
+            font-size: 35px;
+            font-weight: 500;
+
+
+        }
+
+        &-tagline {
+            text-align: center;
+            color: @Light-lavender;
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 18px;
+        }
+
+    }
+
+
+    &__summary {
+        border-radius: 20px;
+
+        flex: 1 1 50%;
+
+    }
+}
